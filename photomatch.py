@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.misc import imread
+from scipy.misc import imread, imresize
 from scipy.spatial.distance import cosine
 
 
@@ -16,5 +16,11 @@ class PhotoMatch(object):
 
 
 if __name__ == '__main__':
-    pm1 = PhotoMatch('data/heart-svg-crop.png', 'data/heart-robot-crop.png')
-    print('Heart:', pm1.cosine)
+    pm1 = PhotoMatch('data/swan-svg-crop.png', 'data/swan-robot-crop.png')
+    print('Swan:', pm1.cosine)
+
+    pm2 = PhotoMatch('data/flower-svg-crop.png', 'data/flower-robot-crop.png')
+    print('Flower:', pm2.cosine)
+
+    pm3 = PhotoMatch('data/heart-svg.jpg', 'data/heart-robot.jpg')
+    print('Heart:', pm3.cosine)

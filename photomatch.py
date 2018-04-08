@@ -24,3 +24,6 @@ if __name__ == '__main__':
 
     pm3 = PhotoMatch('data/heart-svg.jpg', 'data/heart-robot.jpg')
     print('Heart:', pm3.cosine)
+
+    pm4 = PhotoMatch('data/giraffe-svg.jpg', 'data/giraffe-robot.jpg')
+    print('Giraffe:', pm4.cosine)
